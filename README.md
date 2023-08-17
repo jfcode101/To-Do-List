@@ -26,6 +26,6 @@ A simple To Do List web app made by using **HTML**, **CSS**, and **JavaScript**
 ![Desktop view without item added](/images/desktop1.png)
 
 ## Desktop with list populated <a name="desktop2"></a> : 
-![Desktop view with item added and some marked completed](/images/deskt-items.png.png)
+![Desktop view with item added and some marked completed](/images/deskt-items.png)
 
 
