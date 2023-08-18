@@ -16,6 +16,8 @@ A simple To Do List web app made by using **HTML**, **CSS**, and **JavaScript**
 2. [Screenshot](#screenshot)
    1. [Desktop](#desktop)
    2. [Desktop populated](#dektop2)
+   3. [Mobile](#dektop2)
+   3. [Mobile populated](#dektop2)
 
 ## Link
 
@@ -23,10 +25,16 @@ A simple To Do List web app made by using **HTML**, **CSS**, and **JavaScript**
 
 ## Screenshot
 
-## Desktop screen shot without item in the list <a name="desktop"></a> : 
+## Desktop screenshot without item in the list <a name="desktop"></a> : 
 ![Desktop view without item added](/images/desktop1.png)
 
 ## Desktop with a populated list and some items marked completed <a name="desktop2"></a> : 
 ![Desktop view with item added and some marked completed](/images/deskt-items.png)
+
+## Mobile screenshot without item in the list <a name="desktop"></a> : 
+![Mobile view without item added](/images/mobile.png)
+
+## Mobile with a populated list and some items marked completed <a name="desktop2"></a> : 
+![Mobile view with item added and some marked completed](/images/mobile-populated.png)
 
 
