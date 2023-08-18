@@ -7,6 +7,7 @@ A simple To Do List web app made by using **HTML**, **CSS**, and **JavaScript**
 - user types in the task to the input box
 - user can add the task by pressing **Enter** _key_ or by clicking the **Add Task** _button_
 - user is able to mark the task as completed by clicking on the **far left** _circle shaped icon_
+- user can then mark the item as uncomplete by clicking on it, but it's `backgroung-color: #eee` 
 - user is able to delete the task by clicking on the **far right** _circle shaped icon with **x**_  inside
 
 ### Contents
@@ -18,7 +19,7 @@ A simple To Do List web app made by using **HTML**, **CSS**, and **JavaScript**
 
 ## Link
 
-[Github page](https://jfcode101.github.io/To-Do-List/)
+[To Do link](https://jfcode101.github.io/To-Do-List/)
 
 ## Screenshot
 
