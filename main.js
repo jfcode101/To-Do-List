@@ -37,12 +37,16 @@ const x = displayToday();
 document.querySelector("#para-date").innerHTML = x;
 
 // when the user presses the enter key
-input.addEventListener("keydown", (e) => {
-  if (e.keyCode === 13) {
-    addTask();
-    input.value = "";
-  }
-});
+input.addEventListener(
+  "keydown",
+  (e) => {
+    if (e.keyCode === 13) {
+      addTask();
+      input.value = "";
+    }
+  },
+  false
+);
 
 // when the user clicks the add task button
 btnInput.addEventListener("click", () => {
@@ -61,42 +65,64 @@ function addTask() {
 
 // function to create a panel or modal box
 function alertPanel() {
-  // create a panel
-  const panel = document.createElement("div");
-  panel.setAttribute("class", "msgPanel");
-  body.appendChild(panel);
-
-  // create icon to display on the panel
-  const warningIcon = document.createElement("i");
-  warningIcon.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i>`;
-  warningIcon.style.color = "yellow";
-  panel.appendChild(warningIcon);
-
+  const panel = createDiv();
+  const warningIcon = createWarning();
+  const alretMsg = createPara();
+  const exitBtn = buttonExit();
   // create alert message
-  const alretMsg = document.createElement("p");
-  alretMsg.classList.add("para");
+  alretMsg.removeAttribute("paraIcon");
+  alretMsg.setAttribute("class", "para");
   alretMsg.textContent = "You must add a task!";
+  // append children to their respective parents
+  body.appendChild(panel);
+  panel.appendChild(warningIcon);
   panel.appendChild(alretMsg);
-
-  // create exit button
-  const exitBtn = document.createElement("button");
-  exitBtn.classList.add("exit");
-  exitBtn.innerHTML = "&times;";
   panel.appendChild(exitBtn);
-
-  // disable the input box and the button
-  input.disabled = true;
-  btnInput.disabled = true;
-  btnInput.classList.remove("btn-hover");
-
+  // call disable input function
+  disableInput();
   // add an event listener to the exit button
   exitBtn.addEventListener("click", () => {
     body.removeChild(panel);
-    input.disabled = false;
-    input.focus();
-    btnInput.disabled = false;
-    btnInput.classList.add("btn-hover");
+    enableInput();
   });
+}
+
+// create div  function
+function createDiv() {
+  const panel = document.createElement("div");
+  panel.setAttribute("class", "msgPanel");
+  return panel;
+}
+
+// function to create the rectangle warning symbol
+function createWarning() {
+  const warningIcon = document.createElement("i");
+  warningIcon.innerHTML = `<i class="fa-solid fa-triangle-exclamation"></i>`;
+  warningIcon.style.color = "#ffdf00";
+  return warningIcon;
+}
+
+// create exit button function on the panel
+function buttonExit() {
+  const exitBtn = document.createElement("button");
+  exitBtn.classList.add("exit");
+  exitBtn.innerHTML = "&times;";
+  return exitBtn;
+}
+
+// disable input box and button
+function disableInput() {
+  input.disabled = true;
+  btnInput.disabled = true;
+  btnInput.classList.remove("btn-hover");
+}
+
+// enable input box and button
+function enableInput() {
+  input.disabled = false;
+  input.focus();
+  btnInput.disabled = false;
+  btnInput.classList.add("btn-hover");
 }
 
 // function to create list items
@@ -146,18 +172,21 @@ function createLi() {
   btn.addEventListener("click", () => ul.removeChild(li));
 }
 
+// function that creates a paragraph
 function createPara() {
   const para = document.createElement("p");
   para.setAttribute("class", "paraIcon");
   return para;
 }
 
+// function that creates unchecked icon
 function uncheckedIcon() {
   const unchecked = document.createElement("span");
   unchecked.innerHTML = `<i class="fa-regular fa-circle"></i>`;
   return unchecked;
 }
 
+// function that creates checked icon
 function checkedIcon() {
   const checked = document.createElement("span");
   checked.setAttribute("class", "spanHidden");
@@ -165,6 +194,7 @@ function checkedIcon() {
   return checked;
 }
 
+// function that creates the delete button
 function deleteButton() {
   const btn = document.createElement("i");
   btn.classList.add("btnLi");

@@ -175,7 +175,6 @@ li {
 
 .spanHidden {
     display: none;
-    /* color: #686869; */
 }
 
 .paraIcon {
@@ -190,7 +189,6 @@ li {
     margin-right: 1rem;
 }
 
-
 .btnLi {
     /* the line below will place the button to the far right position*/
     margin-left: auto;
@@ -201,13 +199,12 @@ li {
 }
 
 .btnLi:hover {
-    /* font-size: 1.25rem; */
     background: var(--coral-red);
     color: var(--white);
 }
 
 .msgPanel {
-    background-color: white;
+    background-color: var(--white);
     height: 100px;
     width: 300px;
     display: flex;
@@ -224,7 +221,6 @@ li {
 
 [class^='fa-solid'] {
     font-size: 50px;
-    text-shadow: 0 1px 1px var(--dark-grey);
 }
 
 .exit {
@@ -234,13 +230,13 @@ li {
     border: none;
     background: transparent;
     color: var(--coral-red);
-    width: 2rem;
-    height: 2rem;
+    width: 1.75rem;
+    height: 1.75rem;
     border-radius: 50%;
     cursor: pointer;
-    font: normal 500 2rem/1rem 'Open Sans', sans-serif;
-    border: 2px solid #cdcdce;
-    transition: .3s ease-in;
+    font: normal 700 1.5rem/1.25rem 'Open Sans', sans-serif;
+    border: 2px solid var(--coral-red);
+    transition: .3s ease-in-out;
 }
 
 .exit:hover {
@@ -308,9 +304,18 @@ li {
         margin: auto;
     }
 
-    .list-item {
+    /* .list-item {
         height: auto;
         line-height: 1.6;
         padding: 1rem 0;
     }
+
+    .paraIcon,
+    .btnLi {
+        height: 100%;
+        background: yellow;
+        line-height: 2.5rem;
+        display: inline-block;
+        
+    } */
 }
