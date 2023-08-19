@@ -19,7 +19,6 @@ html {
 }
 
 body {
-
     background-image: linear-gradient(to right, #8360c3, #2ebf91);
 }
 
@@ -70,8 +69,8 @@ li {
 
 .intro-date {
     padding: .5rem 1rem;
-    border: 2px solid #2ebf91;
-    border-radius: 30px;
+    /* border: 2px solid #2ebf91;
+    border-radius: 5px; */
 }
 
 .para-date {
@@ -139,7 +138,8 @@ li {
 }
 
 .list-item {
-    height: 2.5rem;
+    height: auto;
+    line-height: 1.6;
     align-items: center;
     background-color: var(--white);
     color: #001510;
@@ -162,11 +162,12 @@ li {
 
 .list-item:hover {
     box-shadow: none;
-    opacity: .85;
+    opacity: 0.9;
 }
 
-.paraIcon,
+.spanLi,
 .btnLi {
+    height: auto;
     font-size: 1.5rem;
     line-height: 2.5rem;
     cursor: pointer;
@@ -177,13 +178,13 @@ li {
     display: none;
 }
 
-.paraIcon {
+.spanLi {
     padding: 0 1rem;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
-.paraIcon:hover {
+.spanLi:hover {
     color: var(--white);
     background-color: #049a5b;
     margin-right: 1rem;
@@ -234,7 +235,7 @@ li {
     height: 1.75rem;
     border-radius: 50%;
     cursor: pointer;
-    font: normal 700 1.5rem/1.25rem 'Open Sans', sans-serif;
+    font: normal 700 1.5rem/.875rem 'Open Sans', sans-serif;
     border: 2px solid var(--coral-red);
     transition: .3s ease-in-out;
 }
@@ -270,6 +271,10 @@ li {
         order: 1;
     }
 
+    .para-date {
+        font-size: .75rem;
+    }
+
     .task-input,
     .input-btn {
         padding: 0 1rem;
@@ -303,19 +308,4 @@ li {
         width: 90%;
         margin: auto;
     }
-
-    /* .list-item {
-        height: auto;
-        line-height: 1.6;
-        padding: 1rem 0;
-    }
-
-    .paraIcon,
-    .btnLi {
-        height: 100%;
-        background: yellow;
-        line-height: 2.5rem;
-        display: inline-block;
-        
-    } */
 }

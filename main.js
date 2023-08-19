@@ -69,10 +69,7 @@ function alertPanel() {
   const warningIcon = createWarning();
   const alretMsg = createPara();
   const exitBtn = buttonExit();
-  // create alert message
-  alretMsg.removeAttribute("paraIcon");
-  alretMsg.setAttribute("class", "para");
-  alretMsg.textContent = "You must add a task!";
+
   // append children to their respective parents
   body.appendChild(panel);
   panel.appendChild(warningIcon);
@@ -128,24 +125,23 @@ function enableInput() {
 // function to create list items
 function createLi() {
   const li = document.createElement("li");
-  const para = createPara();
+  const span = createSpan();
   const unchecked = uncheckedIcon();
   const checked = checkedIcon();
-  const btn = deleteButton();
+  const btnClose = deleteButton();
 
   // append checked icon
-  para.appendChild(unchecked);
+  span.appendChild(unchecked);
 
-  // add event listener to para
-  para.addEventListener("click", () => {
+  // add event listener to span
+  span.addEventListener("click", () => {
     if (checked.classList.contains("spanHidden")) {
       unchecked.classList.add("spanHidden");
       checked.classList.remove("spanHidden");
       // append checked icon
-      para.appendChild(checked);
+      span.appendChild(checked);
       // change the li
-      li.style.color = "#686869";
-      li.style.backgroundColor = "#eee";
+      li.style.color = "#808080";
       li.style.textDecoration = "line-through";
     } else {
       checked.classList.add("spanHidden");
@@ -164,18 +160,26 @@ function createLi() {
       input.value.toString()[0].toUpperCase()
     );
 
-  li.prepend(para);
-  li.appendChild(btn);
+  li.prepend(span);
+  li.appendChild(btnClose);
   ul.appendChild(li);
 
   // remove the item from our to do list
-  btn.addEventListener("click", () => ul.removeChild(li));
+  btnClose.addEventListener("click", () => ul.removeChild(li));
+}
+
+// function that creates a span
+function createSpan() {
+  const span = document.createElement("span");
+  span.setAttribute("class", "spanLi");
+  return span;
 }
 
 // function that creates a paragraph
 function createPara() {
   const para = document.createElement("p");
-  para.setAttribute("class", "paraIcon");
+  para.setAttribute("class", "para");
+  para.textContent = "You must add a task!";
   return para;
 }
 
@@ -201,3 +205,4 @@ function deleteButton() {
   btn.innerHTML = `<i class="fa-regular fa-circle-xmark"></i>`;
   return btn;
 }
+

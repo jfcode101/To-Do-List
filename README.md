@@ -7,7 +7,6 @@ A simple To Do List web app made by using **HTML**, **CSS**, and **JavaScript**
 - user types in the task to the input box
 - user can add the task by pressing **Enter** _key_ or by clicking the **Add Task** _button_
 - user is able to mark the task as completed by clicking on the **far left** _circle shaped icon_
-- user can then mark the item as uncomplete by clicking on it, but it's `backgroung-color: #eee` 
 - user is able to delete the task by clicking on the **far right** _circle shaped icon with **x**_  inside
 
 ### Contents
@@ -15,9 +14,9 @@ A simple To Do List web app made by using **HTML**, **CSS**, and **JavaScript**
 1. [Link](#link)
 2. [Screenshot](#screenshot)
    1. [Desktop](#desktop)
-   2. [Desktop populated](#dektop2)
-   3. [Mobile](#dektop2)
-   3. [Mobile populated](#dektop2)
+   2. [Desktop populated](#desktop2)
+   3. [Mobile](#mobile)
+   3. [Mobile populated](#mobile2)
 
 ## Link
 
@@ -25,16 +24,16 @@ A simple To Do List web app made by using **HTML**, **CSS**, and **JavaScript**
 
 ## Screenshot
 
-## Desktop screenshot without item in the list <a name="desktop"></a> : 
-![Desktop view without item added](/images/desktop1.png)
+## Desktop view without item in the list <a name="desktop"></a> : 
+![](/images/desktop1.png)
 
-## Desktop with a populated list and some items marked completed <a name="desktop2"></a> : 
-![Desktop view with item added and some marked completed](/images/deskt-items.png)
+## Desktop view with item in the list and some manupulation <a name="desktop2"></a> : 
+![](/images/deskt-items.png)
 
-## Mobile screenshot without item in the list <a name="desktop"></a> : 
-![Mobile view without item added](/images/mobile.png)
+## Mobile view without item in the list <a name="mobile"></a> : 
+![](/images/mobile.png)
 
-## Mobile with a populated list and some items marked completed <a name="desktop2"></a> : 
-![Mobile view with item added and some marked completed](/images/mobile-populated.png)
+## Mobile view with items in the list and some manupulation <a name="mobile2"></a> : 
+![](/images/mobile-populated.png)
 
 
